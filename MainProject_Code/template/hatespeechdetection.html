@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hate Speech Detection</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+ <style>
+    *{
+    margin: 0;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+h1{
+    text-align: center;
+    background-color: brown;
+    height: 100px;
+    color: white;
+    text-transform: uppercase;
+    line-height: 100px;
+    word-spacing: 15px;
+}
+
+input{
+    all: none;
+    border: 2px solid rgb(87, 87, 204);
+    margin: 20px 38%;
+    padding: 20px 50px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: 20px;
+    font-weight: 100;
+   
+}
+.btn{
+    text-align: center;
+}
+button{
+    height: 30px;
+    width: 110px;
+    background-color: red;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    color: white;
+}
+button:hover{
+    background-color: orange;
+}
+button:active{
+    background-color: green;
+}
+p{
+    text-align: center;
+    margin-top: 30px;
+}
+ </style>
+<body>
+      <div class="wrapper">
+         
+        <div class="heading">
+            <h1>Hate Speech Detector</h1>
+         </div> 
+
+            <form method="POST" action="/predict" target="_parent">
+         <div class="content">
+             <input name="input" id="input" cols="50" rows="8">
+         </div>
+
+
+       <div class="btn"><button type="submit">Detect</button></div>  
+       </form>
+
+       <p class="out">
+        {{ output }}
+       </p>
+      </div>
+</body>
+</html>
